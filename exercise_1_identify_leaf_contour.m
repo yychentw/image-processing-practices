@@ -18,7 +18,7 @@ subplot(1, 3, 2); imhist(grayI);
 line([thresh thresh], [0 300]);
 subplot(1, 3, 3); imshow(BW);
 
-# Complement the binary image and exclude the petiole by image opening
+% Complement the binary image and exclude the petiole by image opening
 newBW = imcomplement(BW);
 openedBW = imopen(newBW, strel('octagon', 6));
 figure; 
